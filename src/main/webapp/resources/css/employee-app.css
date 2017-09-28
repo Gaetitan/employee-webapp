@@ -8,6 +8,10 @@ h1 { color: #495057; font-family: 'Open Sans Condensed', sans-serif; font-size: 
 	text-align: center;
 }
 
+.table td, .table th {
+	vertical-align: middle;
+}
+
 .btn:hover {
 	cursor: pointer;
 }
