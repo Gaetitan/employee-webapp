@@ -1,0 +1,13 @@
+body {
+	padding: 20px;
+}
+
+h1 { color: #495057; font-family: 'Open Sans Condensed', sans-serif; font-size: 50px; font-weight: 700; line-height: 64px; margin: 0 0 0; padding: 20px 30px; text-align: center; text-transform: uppercase; }
+
+.center {
+	text-align: center;
+}
+
+.btn:hover {
+	cursor: pointer;
+}

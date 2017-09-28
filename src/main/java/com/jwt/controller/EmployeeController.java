@@ -30,19 +30,16 @@ public class EmployeeController {
 	
 	@RequestMapping(value="/")
 	public ModelAndView listEmployee(ModelAndView model) throws IOException {
+		// List of Employees
 		List<Employee> listEmployee = employeeService.getAllEmployees();
 		model.addObject("listEmployee", listEmployee);
+		// New Employee
+		Employee employee = new Employee();
+        model.addObject("employee", employee);
+        
 		model.setViewName("home");
 		return model;
 	}
-	
-	@RequestMapping(value = "/newEmployee", method = RequestMethod.GET)
-    public ModelAndView newEmployee(ModelAndView model) {
-        Employee employee = new Employee();
-        model.addObject("employee", employee);
-        model.setViewName("EmployeeForm");
-        return model;
-    }
  
     @RequestMapping(value = "/saveEmployee", method = RequestMethod.POST)
     public ModelAndView saveEmployee(@ModelAttribute Employee employee) {

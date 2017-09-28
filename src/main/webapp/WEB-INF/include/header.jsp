@@ -6,5 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Employee App</title>
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="resources/css/employee-app.css"/>
+<script src="resources/js/jquery-3.2.1.min.js"></script>
+<script src="resources/js/popper.min.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
 </head>
 <body>
