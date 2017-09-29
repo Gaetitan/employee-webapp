@@ -22,7 +22,12 @@
 					<td>${employee.address}</td>
 					<td>${employee.telephone}</td>
 					<td>
-						<a class="btn btn-secondary" href="editEmployee?id=${employee.id}">Edit</a>
+						<input type="hidden" class="input_id" value="${employee.id}"/>
+						<input type="hidden" class="input_name" value="${employee.name}"/>
+						<input type="hidden" class="input_email" value="${employee.email}"/>
+						<input type="hidden" class="input_address" value="${employee.address}"/>
+						<input type="hidden" class="input_telephone" value="${employee.telephone}"/>
+						<button type="button" class="btn btn-secondary btn_editEmployee" data-toggle="modal" data-target="#newEmployee">Edit</button>
 						<a class="btn btn-danger" href="deleteEmployee?id=${employee.id}">Delete</a>
 					</td>
 				</tr>
@@ -38,7 +43,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">New Employee</h5>
+				<h5 class="modal-title">Employee</h5>
 				<button type="button" class="btn close" data-dismiss="modal"
 					aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -46,7 +51,7 @@
 			</div>
 			<form:form action="saveEmployee" method="post" modelAttribute="employee">
 				<div class="modal-body">
-						<form:hidden path="id" />
+						<form:hidden id="form_id" path="id" />
 						<div class="form-group">
 							<label for="form_name">Name</label>
 							<form:input type="text" class="form-control" id="form_name" placeholder="Steve Rogers" path="name" />
