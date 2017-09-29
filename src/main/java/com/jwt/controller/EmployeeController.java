@@ -58,15 +58,4 @@ public class EmployeeController {
         employeeService.deleteEmployee(employeeId);
         return new ModelAndView("redirect:/");
     }
- 
-    @RequestMapping(value = "/editEmployee", method = RequestMethod.GET)
-    public ModelAndView editContact(HttpServletRequest request) {
-        int employeeId = Integer.parseInt(request.getParameter("id"));
-        Employee employee = employeeService.getEmployee(employeeId);
-        ModelAndView model = new ModelAndView("EmployeeForm");
-        model.addObject("employee", employee);
- 
-        return model;
-    }
-	
 }
